@@ -4,9 +4,8 @@ library(shinyFiles)
 ui <- shinyUI(fluidPage(
   tags$script(src = "script.js"),
 
-  actionButton("open.modal", "Open modal"),
-
   titlePanel("Example"),
+  actionButton("open.modal", "Open modal"),
   shiny::modalDialog(
     shinySaveButton("save", "Save file", "Save file as ...", filetype=list(xlsx="xlsx"))
   )
